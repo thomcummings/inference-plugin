@@ -1,0 +1,18 @@
+{
+  "name": "inference-blueprints",
+  "owner": {
+    "name": "Thom Cummings",
+    "url": "https://thisisinference.com"
+  },
+  "metadata": {
+    "description": "A Claude Code plugin marketplace from Inference — marketing plugins for the AI rebuild.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "newsroom",
+      "source": "./plugins/newsroom",
+      "description": "Six-role newsroom pipeline that takes a rough concept to a publishable, fact-checked draft. Each role runs as an isolated subagent to prevent context convergence."
+    }
+  ]
+}
