@@ -7,6 +7,7 @@ A Claude Code plugin marketplace from [Inference](https://thisisinference.com) â
 | Plugin | What it does |
 |--------|--------------|
 | [`newsroom`](./plugins/newsroom) | Six-role newsroom pipeline that takes a rough concept to a publishable, fact-checked draft. Each role runs as an isolated subagent to prevent context convergence. |
+| [`debate-room`](./plugins/debate-room) | Convene a room of opinionated expert personas to stress-test a question. Each persona is briefed as an independent subagent to prevent convergence, then the orchestrator maps tensions and synthesises a multi-viewpoint answer. |
 
 More plugins land here as the library grows. See the roadmap below for what's in flight.
 
