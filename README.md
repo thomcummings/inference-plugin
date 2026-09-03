@@ -17,19 +17,19 @@ More plugins land here as the library grows. See the roadmap below for what's in
 Install the marketplace once:
 
 ```bash
-/plugin marketplace add thomcummings/inference-blueprints
+/plugin marketplace add thomcummings/inference-plugin
 ```
 
 Then install any plugin from it:
 
 ```bash
-/plugin install newsroom@inference-blueprints
+/plugin install newsroom@inference-plugin
 ```
 
 To see all plugins available in the marketplace:
 
 ```bash
-/plugin marketplace list inference-blueprints
+/plugin marketplace list inference-plugin
 ```
 
 ## What each plugin tends to have in common
