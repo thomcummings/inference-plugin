@@ -1,6 +1,6 @@
-# Inference Blueprints Hub
+# Inference Hub
 
-A Claude Code plugin marketplace from [Inference](https://thisisinference.com) — a growing library of marketing plugins for the AI rebuild. Built on the belief that good AI-native tooling should reflect real expertise, not replace it.
+A Claude Code plugin marketplace from [Inference](https://thisisinference.com) — a growing library of marketing plugins for the AI rebuild. 
 
 ## What's in the hub
 
@@ -44,13 +44,10 @@ A few design principles run through everything here:
 
 ## Roadmap
 
-Plugins in development or being tested before release:
-
-- **`marketing-audit`** — multi-session, stateful audit system with a 29-sub-area maturity model, strategic analysis phase, and self-contained HTML report output
-- **`positioning stack`** — Brand architecture, positioning and messaging development
+More plugins in development. Follow [Annotations by Inference](https://annotationsbyinference.substack.com/) on Substack to get them first.
 
 If something here is useful to you, I'd love to hear about it. Feedback, issues, and pull requests are all welcome.
 
 ## About Inference
 
-Inference is the consulting practice of [Thom Cummings](https://thisisinference.com).
+Inference is a marketing studio for the AI rebuild, founded by [Thom Cummings](https://thisisinference.com).
