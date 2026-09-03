@@ -22,7 +22,7 @@
     {
       "name": "relay-loop",
       "source": "./plugins/relay-loop",
-      "description": "Run an issue from rough idea to merge-ready PR through a disciplined, human-gated agent loop — spec, build, independent review, and fix rounds, each pass in a fresh context. The rigour of a well-run engineering team without the headcount."
+      "description": "Run an issue from rough idea to merge-ready PR through a disciplined, human-gated agent loop — spec, build, independent review, fix rounds, and a closing wrap that verifies the work landed. Each pass in a fresh context. The rigour of a well-run engineering team without the headcount."
     }
   ]
 }

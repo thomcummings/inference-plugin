@@ -18,16 +18,16 @@ in isolated workspaces, reviews each PR against its written contract, and loops
 on fixes until the work is either approved or parked in front of a human.
 
 ```
-spec → ready → build → review → approved / changes / human
+spec → ready → build → review → approved / changes / human → wrap
                 ↑                    │
                 └──── fix pass ◄─────┘
 ```
 
-Four skills, each one pass, each runnable on its own:
+Five skills, each one pass, each runnable on its own:
 
 - **`relay-spec`** — interviews you about a raw idea until a spec is so precise
   that two different agents would build the same thing, then files it (or an
-  ordered chain of issues) in your tracker.
+  ordered chain of issues) in your tracker. *Opens the book.*
 - **`relay-build`** — claims the next gate-labelled issue, implements it against
   its acceptance criteria, verifies, and opens a PR with an evidence ledger.
 - **`relay-review`** — independently reviews an open PR against the *issue*, not
@@ -35,6 +35,10 @@ Four skills, each one pass, each runnable on its own:
   (must-fix / should-fix / safe).
 - **`relay-orchestrate`** — runs one issue through the whole loop without you
   asking for each stage; escalates only the decisions that are yours by design.
+- **`relay-wrap`** — closes the book on a relay-driven thread: verifies the loop
+  reached a terminal state (merged, parked, or abandoned), catches what the
+  loop's discipline couldn't see, and tells you whether the thread is safe to
+  archive. The counterpart to relay-spec.
 
 ## Why it's built this way
 
@@ -63,9 +67,10 @@ preferred mechanism:
 - From a local directory: `/plugin marketplace add /path/to/relay-loop` then
   `/plugin install relay-loop`
 
-The four skills then load as `/relay-loop:relay-spec`,
-`/relay-loop:relay-build`, `/relay-loop:relay-review` and
-`/relay-loop:relay-orchestrate` (namespaced by plugin).
+The five skills then load as `/relay-loop:relay-spec`,
+`/relay-loop:relay-build`, `/relay-loop:relay-review`,
+`/relay-loop:relay-orchestrate` and `/relay-loop:relay-wrap`
+(namespaced by plugin).
 
 ## Usage
 
@@ -93,6 +98,20 @@ The four skills then load as `/relay-loop:relay-spec`,
 isolated clone, run the review, loop on fixes (capped at two rounds, then it
 forces a human call), and hand you a merge-ready PR — or park an escalation in
 front of you with exactly three lines: *Deciding / Options / My read*.
+
+### Closing a thread (after the loop)
+
+```bash
+# Is this thread safe to archive? Verifies the loop reached a terminal state
+/relay-loop:relay-wrap
+```
+
+`relay-wrap` is the closing ritual for a relay-driven thread. It checks the
+issue actually landed (merged, parked for a human, or abandoned — and says
+which), surfaces anything the loop's discipline couldn't see (an unverified
+"tests pass", an unanswered escalation, a follow-up you promised), and gives a
+one-line verdict on whether the thread is closeable. Report only — it never
+fixes or files; it offers, and acts only if asked.
 
 ## Configuration
 
