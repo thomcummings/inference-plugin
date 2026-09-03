@@ -18,6 +18,11 @@
       "name": "debate-room",
       "source": "./plugins/debate-room",
       "description": "Convene a room of opinionated expert personas to stress-test a question. Each persona is briefed as an independent subagent to prevent convergence, then the orchestrator maps tensions and synthesises a multi-viewpoint answer."
+    },
+    {
+      "name": "relay-loop",
+      "source": "./plugins/relay-loop",
+      "description": "Run an issue from rough idea to merge-ready PR through a disciplined, human-gated agent loop — spec, build, independent review, and fix rounds, each pass in a fresh context. The rigour of a well-run engineering team without the headcount."
     }
   ]
 }
