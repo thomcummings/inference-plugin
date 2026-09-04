@@ -1,9 +1,9 @@
 # Relay Loop
 
 A Claude Code plugin that runs an issue from a rough idea to a merge-ready PR
-through a disciplined, human-gated agent loop. Four skills — spec, build,
-review, orchestrate — that work together (or standalone) to give you the
-rigour of a well-run engineering team without the headcount.
+through a disciplined, human-gated agent loop. Six skills — spec, batch,
+build, review, orchestrate, wrap — that work together (or standalone) to give
+you the rigour of a well-run engineering team without the headcount.
 
 Built on the conviction that the value of agentic coding isn't raw autonomy —
 it's **discipline applied at the boundaries**. Relay's job is to make sure the
@@ -23,11 +23,14 @@ spec → ready → build → review → approved / changes / human → wrap
                 └──── fix pass ◄─────┘
 ```
 
-Five skills, each one pass, each runnable on its own:
+Six skills, each one pass, each runnable on its own:
 
 - **`relay-spec`** — interviews you about a raw idea until a spec is so precise
   that two different agents would build the same thing, then files it (or an
   ordered chain of issues) in your tracker. *Opens the book.*
+- **`relay-batch`** — specs several unspecced tickets in one session: pick from
+  a ranked list, interview each in turn, then dispose of each draft (ready /
+  parked) in one closing gate. *The morning-coffee pass over the backlog.*
 - **`relay-build`** — claims the next gate-labelled issue, implements it against
   its acceptance criteria, verifies, and opens a PR with an evidence ledger.
 - **`relay-review`** — independently reviews an open PR against the *issue*, not
@@ -67,10 +70,10 @@ preferred mechanism:
 - From a local directory: `/plugin marketplace add /path/to/relay-loop` then
   `/plugin install relay-loop`
 
-The five skills then load as `/relay-loop:relay-spec`,
-`/relay-loop:relay-build`, `/relay-loop:relay-review`,
-`/relay-loop:relay-orchestrate` and `/relay-loop:relay-wrap`
-(namespaced by plugin).
+The six skills then load as `/relay-loop:relay-spec`,
+`/relay-loop:relay-batch`, `/relay-loop:relay-build`,
+`/relay-loop:relay-review`, `/relay-loop:relay-orchestrate` and
+`/relay-loop:relay-wrap` (namespaced by plugin).
 
 ## Usage
 
@@ -79,6 +82,9 @@ The five skills then load as `/relay-loop:relay-spec`,
 ```bash
 # Turn a rough idea into a build-ready issue (interactive — you answer)
 /relay-loop:relay-spec "Add a usage dashboard"
+
+# Spec several unspecced tickets in one session (pick, interview, dispose)
+/relay-loop:relay-batch
 
 # Build the next ready issue in this repo
 /relay-loop:relay-build
@@ -144,16 +150,19 @@ branch_pattern: "{ID}-{slug}"
 
 | Label | Meaning | Who applies it |
 |-------|---------|----------------|
-| `relay-draft` | Spec written, not yet read | relay-spec |
+| `relay-draft` | Spec written, not yet read — or deliberately parked | relay-spec / relay-batch |
 | `relay-ready` | A human read the spec; safe to build | **A human — never an agent** |
 | `relay-blocked` | A pass needs an answer before it can continue | relay-build |
 | `relay-changes` | Review found must-fixes on a PR | relay-review |
 | `relay-human` | Needs a human decision before the loop resumes | relay-review / relay-build |
 | `relay-approved` | Independent review passed; evidence for a human | relay-review |
 
-The asymmetry is deliberate: agents apply every label *except* `relay-ready`,
-which only a human applies. That single rule is what keeps the loop from
-building things nobody actually readied.
+The asymmetry is deliberate: agents apply every label *except* `relay-ready`.
+When relay-spec or relay-batch files a draft, the operator chooses its
+disposition in the same session — **ready** (the agent applies `relay-ready`
+as the operator's instructed in-room read, recorded on the issue) or **park**
+(leaves it as a deliberately-saved `relay-draft` for a later cold read). The
+agent never readies anything on its own; the human owns that boundary.
 
 ## Architecture & design principles
 
