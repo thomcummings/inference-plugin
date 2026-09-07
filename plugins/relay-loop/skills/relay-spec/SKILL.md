@@ -109,7 +109,9 @@ or missing, resolve it before filing:
 ## 5. Confirm and file
 Show the full draft in chat — every issue in the chain, in order, each with its
 stated dependencies — plus the resolved project. Get one explicit go-ahead for
-the whole set.
+the whole set. That in-room approval is itself the operator's read of the draft:
+they have just seen every word of it in the conversation. Do not make them
+re-find and re-read the same text in the tracker afterwards.
 
 Then, in build order, for each issue: create it in the resolved `project` on
 `team`, status Backlog, label `{loop_name}-draft`. In a chain, immediately after
@@ -118,8 +120,32 @@ issues it depends on, using the real IDs the tracker just returned — never a
 placeholder. Report every identifier and URL the tracker returns, in order;
 later stages and the human gate use them, never a guess.
 
+## 6. Ending — two options, chosen by the operator
+After filing, offer the operator a per-issue disposition. The draft has just
+been read and approved in-room, so this is not a second approval pass — it is
+the operator choosing what happens next:
+
+- **Ready** — the operator, in this session, after seeing the filed draft,
+  explicitly says to ready it. Apply `{loop_name}-ready` as their instructed
+  action and record the read on the issue comment: "Readied in-room by the
+  operator on <date> — final read done here." The loop may then continue
+  (orchestration picks the issue up).
+- **Park** — the operator deliberately saves it for later. Leave it as
+  `{loop_name}-draft`; it awaits a cold read another day. Parked is an active
+  choice, not a default obligation.
+
+Offer both every time. Never default to one. A chain is readied one issue at a
+time, as each becomes the next safe unit of work; the ready option applies to
+the next buildable link only.
+
+**Policy carve-out:** if any configured policy flag is yes (`needs-ratification`
+or a setup-specific policy), the ready option is gated on ratification in the
+same session. Ratifying is deciding the underlying business question, not
+approving the spec text — so those end as parked-pending-ratification unless
+the operator explicitly ratifies now.
+
 ## Hard rule
-Never apply `{loop_name}-ready`, on any issue in the set. A human applies it per
-issue after a final read — that label is the boundary between "idea" and "an
-agent builds it". A chain is readied one issue at a time, as each becomes the
-next safe unit of work. This skill never runs unattended.
+Never apply `{loop_name}-ready` autonomously or by default. It is applied only
+as the operator's explicit per-issue choice in the step-6 disposition, or their
+later in-tracker read. That label is the boundary between "idea" and "an agent
+builds it". This skill never runs unattended.

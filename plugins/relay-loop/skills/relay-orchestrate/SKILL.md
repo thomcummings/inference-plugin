@@ -32,7 +32,8 @@ gate, or run the spec interview in-room if the user is present and asks).
   them; report unverified as unverified, never as absent.
 - **Never merge, never enable auto-merge.** `{loop_name}-approved` is evidence
   for a human, not merge authorisation. The merge is the operator's.
-- **Never apply `{loop_name}-ready` autonomously** — one exception, see §2.
+- **Never apply `{loop_name}-ready` autonomously.** It is the operator's
+  explicit choice — in-room (relay-spec step 6) or in the tracker. See §2.
 - **Never answer an escalated product decision.** Surface it in-room in the
   three-line shape (§7) and stop. Deciding is the operator's; you may give a read.
 
@@ -104,15 +105,17 @@ invocation (`/relay-orchestrate INF-123 spec`), or says so in the room: run
 relay-spec here, in this session, interactively — every product decision is
 asked, never guessed. It files the issue (or chain) with `{loop_name}-draft`.
 
-Then the hard rule binds: **`{loop_name}-ready` is the human's final read.**
-Agents never apply it autonomously. The one exception: the user, in this
-session, after seeing the filed draft, explicitly says to ready it — then you
-apply the label as their instructed action and record the read on the issue
-comment: "Readied in-room by the operator on <date> — final read done here." Without
-that explicit instruction, stop after filing and hand back: "Spec filed —
-read it, then say 'ready it' or apply relay-ready in the tracker, and I'll run the
-loop." A chain is readied one issue at a time; orchestrate only the issue the
-user actually readied.
+Then the doctrine binds: **`{loop_name}-ready` is the operator's explicit
+choice, applied in-room or in the tracker — never an agent's autonomous act.**
+When spec mode runs here, the ending offers the two options from relay-spec
+step 6 (ready, or deliberately parked). If the operator, in this session,
+explicitly readies the filed draft, apply the label as their instructed action
+and record the read on the issue comment: "Readied in-room by the operator on
+<date> — final read done here." That in-room approval counts as the operator's
+final read — they just saw the draft in full — so the loop may proceed without
+a second pass through the tracker. If the operator parks it, leave
+`{loop_name}-draft` and end. A chain is readied one issue at a time; orchestrate
+only the issue the operator actually readied.
 
 ## 3. Build dispatch
 
@@ -204,7 +207,8 @@ what each gate said, what is left for the operator (usually: merge).
 ## Hard limits
 
 - Never merge or enable auto-merge; never review or build in your own context.
-- Never apply `{loop_name}-ready` without the user's explicit in-room read (§2).
+- Never apply `{loop_name}-ready` without the operator's explicit in-room or
+  in-tracker read (§2).
 - Never answer an escalated product decision.
 - Never run two passes into one workspace, or review while a fix is mid-flight.
 - Never redispatch the same failing stage a third time without completing it
