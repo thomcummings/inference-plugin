@@ -9,6 +9,8 @@ A Claude Code plugin marketplace from [Inference](https://thisisinference.com) â
 | [`relay-loop`](./plugins/relay-loop) | My agentic software development loop - run rough ideas through spec, build, review, fixes, and deploy through a disciplined, human-gated agent loop â€” each pass in a fresh context. |
 | [`newsroom`](./plugins/newsroom) | Six-role newsroom pipeline that takes a rough concept to a publishable, fact-checked draft. Each role runs as an isolated subagent to prevent context convergence. |
 | [`debate-room`](./plugins/debate-room) | Convene a room of opinionated expert personas to stress-test a question. Each persona is briefed as an independent subagent to prevent convergence, then the orchestrator maps tensions and synthesises a multi-viewpoint answer. |
+| [`gtm`](./plugins/gtm) | Go-to-market and marketing strategy skills: positioning, messaging, ICP, growth models and bets, channel maps, ABM, pricing, naming, brand and selling systems. |
+| [`agentops`](./plugins/agentops) | Skills for building and running an agent setup: skill and agent design, handoffs between sessions, and checking a thread is safe to close. |
 
 More plugins land here as the library grows. See the roadmap below for what's in flight.
 
@@ -37,6 +39,10 @@ To see all plugins available in the marketplace:
 More plugins in development. Follow [Annotations by Inference](https://annotationsbyinference.substack.com/) on Substack to get them first.
 
 If something here is useful to you, I'd love to hear about it. Feedback, issues, and pull requests are all welcome.
+
+## Licence
+
+MIT. See [LICENSE](./LICENSE). Where a skill builds on someone else's published method, it credits them in its method lineage section.
 
 ## About Inference
 
