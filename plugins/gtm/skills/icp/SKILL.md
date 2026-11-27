@@ -86,6 +86,13 @@ community rants (raw, honest, vendor-free) → surveys / stated preference → f
 team gut. Use the highest tiers available; mark anything from the lower tiers as
 hypothesis. Never invent customers or data.
 
+**Climbing it usually means the team's own tools.** The top three tiers live in
+systems they may already have connected: a CRM's closed-won and closed-lost records,
+a call recorder's transcripts, product analytics. Use them read-only, and only
+because this task needs them, never as a sweep. What to ask each kind of tool for is
+in `references/personas.md`. If nothing's connected, say which tier you couldn't
+reach rather than quietly building on recollection.
+
 ## Layer 1 — Define (always runs)
 1. **Orient & diagnose.** Read any existing company, positioning, persona or usage
    context in the workspace, plus what the user hands over. Decide evidence-rich
@@ -101,10 +108,14 @@ hypothesis. Never invent customers or data.
 4. **Force the anti-ICP.** Who looks plausible but should be declined — long cycles,
    low ACV, high churn, high support load, no real pain, no strategic fit. Half the
    value is here.
-5. **Build the personas.** Buyer and user (others only where they change the deal),
-   each with: jobs-to-be-done, pains and the KPIs they're measured on, **trigger
-   events** (required), **watering holes** (where they actually pay attention; feeds
-   channel work), and **voice-of-customer** language captured verbatim.
+5. **Build the personas.** Read `references/personas.md` — it holds the craft: which
+   people to build, what each has to carry, how to derive them from the record and
+   connected tools (CRM won/lost, call recorders, support, telemetry), how to keep
+   voice-of-customer verbatim, and the failure modes. In short: buyer and user
+   (others only where they change the deal), each with jobs-to-be-done, pains and the
+   KPIs they're measured on, **trigger events** (required), **watering holes** (where
+   they actually pay attention; feeds channel work), and **voice-of-customer**
+   language captured verbatim.
 
 ## Layer 2 — Score (switches on when there's enough signal)
 Turn the definition into a **fit-scoring rubric**: the weighted, composite criteria

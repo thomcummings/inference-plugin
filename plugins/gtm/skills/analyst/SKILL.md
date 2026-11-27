@@ -1,18 +1,18 @@
 ---
 name: analyst
 description: >-
-  The measurement challenger. Two modes: FRAMEWORK builds a client measurement framework
-  as a KPI driver tree — north star, driver metrics, activity metrics, guardrails, with
+  The measurement challenger. Two modes: FRAMEWORK builds a KPI driver tree — north
+  star, driver metrics, activity metrics, guardrails, with
   owner/cadence/source/baseline per metric and an instrumentation gap list; ADVISOR
-  answers "what's the right measurement for X?" mid-anything — challenges the premise
-  first, then locates the answer within the client's driver tree (or names the tree's
-  absence as the first finding). Baked-in apparatus: leading vs lagging, input vs output,
-  north star selection, guardrails, vanity smell tests, attribution honesty tiers,
-  time-to-signal, archetype trees for PLG/sales-led/services. Trigger eagerly on
-  "measurement framework", "KPI tree", "north star metric", "what should we measure", "how
-  do we know if [activity] is working", "is [metric] the right metric", dashboard
-  requests, or whenever a plan, brief, channel map or workstream needs its judging metric
-  chosen or validated. NOT for implementing tracking (GA4/GTM setup).
+  answers "what's the right measurement for X?" mid-anything, challenging the premise
+  first. Also decides what to believe when sources disagree or a channel's credit is
+  disputed. Trigger on "measurement framework", "KPI tree", "north star metric",
+  "what should we measure", "is [metric] the right metric", "how do we know if
+  [activity] is working", dashboard requests, "our dashboards don't match", "Google
+  Ads says 40 conversions but the CRM says 12", "which channel actually drove this",
+  "should we move budget from X to Y", "attribution", "last-click", "incrementality",
+  or whenever a plan needs its judging metric chosen. NOT for implementing tracking
+  (GA4/GTM setup, pixels, tagging).
 ---
 
 # Measurement analyst
@@ -52,6 +52,12 @@ fully-worked archetype trees (PLG SaaS, sales-led B2B, services/consultancy) are
 supporting apparatus (leading/lagging, input/output, guardrails, vanity smell tests,
 attribution honesty tiers, time-to-signal, stage-appropriate measurement) is in
 `references/frameworks.md` — read it before substantive work in either mode.
+
+When the question is *which channel gets the credit* rather than *which metric to watch* —
+conflicting dashboards, a budget reallocation, a channel whose contribution is disputed —
+read `references/attribution.md`. It covers why sources disagree, the models and what each
+one flatters, choosing between multi-touch / mix-modelling / incrementality, the blind spots
+(direct, branded search, AI answer engines, buying groups), and the reconciliation steps.
 
 ## Mode: FRAMEWORK — build the measurement framework
 
@@ -116,8 +122,8 @@ Advisor answers are short — the challenge, the tree location, and the three nu
 
 ## Handoffs
 
-This skill decides *what* to measure; implementation (GA4/GTM/attribution plumbing) is
-execution-layer work. Natural callers: channel-map ("one metric per Build-first"),
+This skill decides *what* to measure and *what to believe* when the sources disagree;
+implementation (GA4/GTM, pixels, tagging, identity stitching) is execution-layer work. Natural callers: channel-map ("one metric per Build-first"),
 marketing-plan (workstream metrics and the affordability arithmetic's funnel figures),
 campaign-brief (the success-defined-now section). Validate their metric choices against
 the tree rather than letting each document invent its own — that arbitration is the point

@@ -19,3 +19,9 @@ Current profiles:
 - `founder-led.md` — founder-led sales / founder-led growth
 - `community-led.md` — community and ecosystem pull
 - `partner-led.md` — partner / channel / white-label motions
+
+One entry deliberately breaks the shape above, because it isn't a motion:
+
+- `retention.md` — retention, churn and expansion. The diagnostic for a leaking base:
+  voluntary vs involuntary, where voluntary churn actually comes from, what bites when you
+  measure it, and when retention work is the wrong answer.

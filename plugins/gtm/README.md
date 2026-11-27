@@ -16,7 +16,7 @@ working document.
 
 | Area | Skills |
 |---|---|
-| Foundations | `positioning`, `point-of-view`, `messaging-framework`, `language-market-fit`, `icp`, `competitive-scan`, `context-layer` |
+| Foundations | `positioning`, `point-of-view`, `content-model`, `messaging-framework`, `language-market-fit`, `icp`, `competitive-scan`, `context-layer` |
 | Brand | `brand-architecture`, `brand-archetype`, `brand-overview`, `essence-craft`, `naming`, `marketing-psychologist` |
 | Growth | `growth-model`, `growth-bets`, `channel-map`, `campaign-brief`, `release-gtm`, `dev-mktg`, `pricing-packaging` |
 | Plans and decisions | `marketing-plan`, `pressure-test`, `sharpen-strategy`, `marketing-board-update`, `analyst`, `org-design`, `agentic-opportunity`, `build-marketing-system-model` |

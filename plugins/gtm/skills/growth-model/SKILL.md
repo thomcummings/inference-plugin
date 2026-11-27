@@ -1,19 +1,18 @@
 ---
 name: growth-model
 description: >-
-  Diagnose how a business should grow as a system — the engine, the motion, and
-  what must be true before scaling — before any channel or tactic. Use when the
-  user asks how a company should grow, why growth is stalling, whether it should be
-  PLG, sales-led, founder-led, content-led, partner-led, community-led or hybrid,
-  whether a growth or channel plan makes structural sense, what the growth engine
-  is, or what must be proven before scaling. This skill owns the
-  how/why/which-motion question; hand what-to-do-next to growth-bets and
-  route-to-market detail to channel-map. Trigger before either when the underlying
-  engine, motion, PMF/pull signal or compounding mechanism is unclear. Produces an
-  evidence-graded read: engine, fuel, lubricants, boosts, motion, fit tests, an
-  engine-health watch, and the cheapest next proof. Not for ranked experiment
-  portfolios (growth-bets), channel prioritisation (channel-map), or tactical
-  execution.
+  Diagnose how a business should grow as a system — the engine, the motion, and what
+  must be true before scaling — before any channel or tactic. Use when the user asks
+  how a company should grow, why growth is stalling, whether it should be PLG,
+  sales-led, founder-led, content-led, partner-led, community-led or hybrid, what the
+  growth engine is, or what must be proven before scaling. Also owns retention, churn
+  and expansion as a growth question: "why are customers churning", "our churn is too
+  high", "net revenue retention", "retention or acquisition?", "expansion revenue" —
+  where the leak is and whether retention is a lubricant or the engine. Produces an
+  evidence-graded read: engine, fuel, lubricants, leak, boosts, motion, fit tests,
+  and the cheapest next proof. Not for ranked experiment portfolios (growth-bets),
+  channel prioritisation (channel-map), or execution such as cancel flows and
+  lifecycle campaigns.
 ---
 
 # Growth model
@@ -77,6 +76,10 @@ Seed library (expandable — add a file as the repertoire grows):
 - `references/founder-led.md` — founder-led sales / founder-led growth
 - `references/community-led.md` — community and ecosystem pull
 - `references/partner-led.md` — partner / channel / white-label motions
+- `references/retention.md` — retention, churn and expansion. Not a motion profile: the
+  diagnostic for when the base leaks. Read it whenever churn or retention is the presenting
+  problem, and whenever the model is subscription or usage-based (there retention is the
+  engine, not a lubricant, and the ceiling it sets is usually the finding).
 
 If the right model is not yet in the library, reason from first principles, name
 that the profile is missing, and write a new reference file so the next run inherits
@@ -145,11 +148,17 @@ Use a practical version of the Reforge racecar / loop logic. Read
 | Engine | What repeatable mechanism can drive most growth? |
 | Fuel | What input does the engine consume: capital, content, users, sales capacity, data, proof, community, inventory? |
 | Lubricants | What makes the engine more efficient: activation, conversion, retention, onboarding, pricing, proof, sales enablement? |
+| Leak | What proportion of each cycle's output is lost before it can be reinvested? |
 | Boosts | What can spike growth but not compound: PR, launch, events, one-off campaigns, founder stunts? |
 | Reinvestment | How does output from one cycle feed the next? |
 
 Name whether the model is actually a loop, a funnel, a services-led sales motion, or
 a set of disconnected tactics. Do not force a loop where one does not exist.
+
+If the leak is large — or if the business is subscription or usage-based, where the base
+*is* the engine — stop and read `references/retention.md` before going further. A model
+that adds customers to a leaking base has a ceiling, and naming that ceiling is usually
+worth more than any channel recommendation downstream of it.
 
 ### 4. Run the fit tests
 
