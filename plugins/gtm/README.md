@@ -9,7 +9,7 @@ working document.
 
 ```bash
 /plugin marketplace add thomcummings/inference-plugin
-/plugin install gtm@inference-plugin
+/plugin install gtm@inference
 ```
 
 ## Skills
@@ -19,11 +19,18 @@ working document.
 | Foundations | `positioning`, `point-of-view`, `content-model`, `messaging-framework`, `language-market-fit`, `icp`, `competitive-scan`, `context-layer` |
 | Brand | `brand-architecture`, `brand-archetype`, `brand-overview`, `essence-craft`, `naming`, `marketing-psychologist` |
 | Growth | `growth-model`, `growth-bets`, `channel-map`, `campaign-brief`, `release-gtm`, `dev-mktg`, `pricing-packaging` |
-| Plans and decisions | `marketing-plan`, `pressure-test`, `sharpen-strategy`, `marketing-board-update`, `analyst`, `org-design`, `agentic-opportunity`, `build-marketing-system-model` |
+| Plans and decisions | `marketing-plan`, `marketing-board-update`, `analyst`, `org-design`, `agentic-opportunity` |
 | Sales and ABM | `selling-system`, `abm-strategy`, `abm-setup`, `abm-ops` |
+| Content production | `newsroom`, `research-tooling`, plus the `/newsroom` commands and six newsroom agents. See [docs/newsroom.md](./docs/newsroom.md) |
 
 Some skills hand off to others by name. A handoff to a skill you haven't installed is a
-suggestion, not a requirement.
+suggestion, not a requirement. For stress-testing a plan or a single bet, install
+[`thinking-tools`](../thinking-tools) alongside: it holds `sharpen-strategy`,
+`pressure-test` and `debate-room`.
+
+Start with `context-layer`. It builds one shared store of your positioning, audience,
+messaging and proof and points your agents at it, so every other skill starts from your
+real context and asks you less.
 
 ## Credits
 

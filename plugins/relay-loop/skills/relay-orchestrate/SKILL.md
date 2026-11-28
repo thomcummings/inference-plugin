@@ -1,6 +1,8 @@
 ---
 name: relay-orchestrate
-description: "Use when running one issue through the Relay loop to a PR."
+version: 1.0.0
+license: MIT
+description: "Use when running one issue through the Relay loop to a PR, or when asked to orchestrate Relay from Slack/Cursor Cloud. A stage is always a fresh top-level agent, never a sub-agent."
 ---
 
 # Relay orchestrator
@@ -27,7 +29,7 @@ gate, or run the spec interview in-room if the user is present and asks).
 - **A fresh agent per stage.** Builder, reviewer and any overlay reviewer are
   separate passes in separate contexts. Never review in the same context that
   built, and never fold the orchestrator's own judgement into a verdict.
-- **Verify gates live, every dispatch.** Tracker labels, issue state, PR labels
+- **Verify gates live, every dispatch.** Linear labels, issue state, PR labels
   and head SHAs all move between turns. Re-fetch in the same turn you act on
   them; report unverified as unverified, never as absent.
 - **Never merge, never enable auto-merge.** `{loop_name}-approved` is evidence
@@ -42,7 +44,7 @@ gate, or run the spec interview in-room if the user is present and asks).
 ```
 /relay-orchestrate <ID>
   │
-  ├─ 0. map ID → repo (relay.config.md initiative)
+  ├─ 0. map ID → repo (known setups / config initiative)
   ├─ 1. gate check (fresh read of the issue)
   │      ├─ already has an open PR → resume at the right stage (§1)
   │      ├─ not ready → gate report, or spec interview in-room (§2) → end
@@ -51,8 +53,9 @@ gate, or run the spec interview in-room if the user is present and asks).
   ├─ 2. BUILD  — one fresh builder pass (relay-build) in a clean clone
   │      └─ pass fails → failure ladder (§3); never blind-redispatch
   │
-  ├─ 3. OVERLAY REVIEW (only when the repo's AGENTS.md mandates one) — fresh
-  │      agent at the settled head SHA
+  ├─ 3. OVERLAY REVIEW (only when the repo's AGENTS.md mandates one,
+  │      e.g. siteops steward-review on the website) — fresh agent at the
+  │      settled head SHA
   │
   ├─ 4. REVIEW  — one fresh reviewer pass (relay-review)
   │
@@ -69,10 +72,18 @@ the same PR.
 
 ## 0. Map the ID to a repo
 
-Read the issue's team and project. Match against the loop setup declared in
-`relay.config.md`; when in doubt read each candidate's `relay.config.md` and
-compare `initiative` and `team` to the issue before committing to a repo. Never
-guess. When the issue belongs to no configured setup, ask which repo to run in.
+Read the issue's team and project. Match against the configured loop setups;
+when in doubt read each candidate's `relay.config.md` and compare `initiative`
+and `team` to the issue before committing to a repo. Never guess.
+
+A loop setup is defined by its `relay.config.md` (at repo root or
+`./.relay/config.md`) — `initiative`, `team`, and any per-setup `policies` and
+mandated overlay reviews. Keep private installation details (local checkout
+paths, per-client policy specifics) in the operator's private configuration,
+never in the skill body, so the skill stays portable across marketplaces.
+
+The issue belongs to exactly one repo. Ambiguous → ask, listing the
+candidates. No known setup → ask which repo to run in.
 
 ## 1. Gate check — fresh, same turn
 
@@ -150,12 +161,13 @@ after dispatched passes failed"). A third blind dispatch wastes the operator's t
 ## 4. Overlay reviews (per-repo)
 
 When the repo's AGENTS.md mandates an independent review before a human merge
-decision, dispatch it between build and relay-review as its own fresh pass at
-the settled head SHA — never fold it into the Relay review, and never let the
-builder run it. A PASS WITH FOLLOW-UPS verdict behaves like review feedback:
-ratify its follow-ups, then run the fix pass. New commits invalidate the prior
-verdict, so an overlay review that pre-dates a fix push must be re-run at the
-new head before the loop can finish.
+decision (the website repo requires a current-SHA siteops steward verdict),
+dispatch it between build and relay-review as its own fresh pass at the
+settled head SHA — never fold it into the Relay review, and never let the
+builder run it. A steward verdict of PASS WITH FOLLOW-UPS behaves like review
+feedback: ratify its follow-ups, then run the fix pass. New commits
+invalidate the prior verdict, so an overlay review that pre-dates a fix push
+must be re-run at the new head before the loop can finish.
 
 ## 5. Review dispatch
 
@@ -217,4 +229,5 @@ what each gate said, what is left for the operator (usually: merge).
   tracker, the PR and the head SHA first.
 
 Sibling contracts: relay-spec (interview + filing), relay-build (builder
-pass), relay-review (reviewer pass).
+pass), relay-review (reviewer pass). The website overlay contract lives in that repo's
+AGENTS.md and siteops:steward-review.

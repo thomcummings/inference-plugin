@@ -1,6 +1,6 @@
 ---
 name: relay-build
-description: "Claim the next safe gate-labelled issue from the configured tracker, implement it, and open a PR. Use to run the Relay builder or fix Relay review feedback. Designed for /loop; one pass does one unit of work."
+description: "Claim the next safe gate-labelled issue from the configured tracker, implement it, and open a PR. Use to run the Relay builder or fix Relay review feedback, including Slack/Cursor Cloud phrases like 'please build INF-123' or 'claim the next ready issue'. Designed for /loop; one pass does one unit of work. Do not use for ad-hoc coding outside the Relay loop."
 ---
 
 # Relay builder

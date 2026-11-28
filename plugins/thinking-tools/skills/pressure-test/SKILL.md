@@ -1,10 +1,9 @@
 ---
 name: pressure-test
 description: >-
-  The go/no-go gate before a marketing bet is placed. Use when the user wants a
-  proposed move stress-tested before committing money, time or attention: a campaign,
-  a new channel, a launch, a content programme, a rebrand, a big spend, a "should we
-  do this?" Trigger on "pressure-test this", "gut-check this", "is this worth doing",
+  The go/no-go gate before a bet is placed. Use when the user wants a proposed move
+  stress-tested before committing money, time or attention: a campaign, a new channel,
+  a launch, a hire, a new product line, a rebrand, a big spend, a "should we do this?" Trigger on "pressure-test this", "gut-check this", "is this worth doing",
   "talk me out of this", "go/no-go", "before we build this funnel", "should we
   bother", "am I about to waste money on this". The skill plays the skeptic ITSELF
   using what it already knows about the client, then interrogates only the load-bearing

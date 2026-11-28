@@ -1,6 +1,6 @@
 # Debate Room
 
-A Claude Code plugin that convenes a room of opinionated expert personas to stress-test a question and produce a multi-viewpoint answer sharper than any single take.
+A workflow in the `thinking-tools` plugin that convenes a room of opinionated expert personas to stress-test a question and produce a multi-viewpoint answer sharper than any single take.
 
 Built on the idea that most "multi-perspective" answers collapse into a single voice because all the perspectives share one context window. Debate Room deliberately breaks that: each persona is briefed *independently* as an isolated subagent, so they can't anchor on each other. Only after every voice has been heard does the orchestrator map tensions and synthesise.
 
@@ -25,11 +25,12 @@ The separation is the quality mechanism. You see the working, not just the concl
 
 ## Installation
 
-The plugin ships as a standard Claude Code plugin. Install it via your preferred mechanism:
+debate-room ships in the `thinking-tools` plugin:
 
-- From a marketplace: `/plugin install debate-room`
-- From a local directory: `/plugin marketplace add /path/to/debate-room-plugin` then `/plugin install debate-room`
-- From a git repository: follow your marketplace's pattern
+```bash
+/plugin marketplace add thomcummings/inference-plugin
+/plugin install thinking-tools@inference
+```
 
 Once installed, the skill auto-triggers on phrases like "stress test this," "poke holes in this," "what would my team say about this," "debate this," "convene the room," or any request that implies wanting friction between viewpoints.
 
@@ -120,4 +121,4 @@ Built on the principle that good answers to hard questions come from real disagr
 
 ## Licence
 
-MIT. See [LICENSE](../../LICENSE) at the root of this repository.
+MIT. See [LICENSE](../../../LICENSE) at the root of this repository.

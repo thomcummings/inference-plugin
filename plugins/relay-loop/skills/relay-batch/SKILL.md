@@ -1,6 +1,6 @@
 ---
 name: relay-batch
-description: "Pick a set of unspecced tickets, interview them one after another in a single session, and dispose of each approved draft — ready or deliberately parked — in one closing gate. Use to run the Relay spec in batch mode. Interactive — the user is present and owns every product decision; never runs unattended."
+description: "Pick a set of unspecced tickets, interview them one after another in a single session, and dispose of each approved draft — ready or deliberately parked — in one closing gate. Use to run the Relay spec in batch mode, including Slack/Cursor Cloud phrases like 'spec these tickets' or 'relay-batch'. Interactive — the user is present and owns every product decision; never runs unattended."
 ---
 
 # Relay batch

@@ -1,6 +1,6 @@
 ---
 name: relay-review
-description: "Review open PRs against their linked issue contract and required checks, then post a three-group verdict with Relay labels. Use to run the Relay reviewer. Designed for /loop; never merges or pushes code."
+description: "Review open PRs against their linked issue contract and required checks, then post a three-group verdict with Relay labels. Use to run the Relay reviewer, including Slack/Cursor Cloud phrases like 'please review this PR' or 'run the Relay reviewer'. Designed for /loop; never merges or pushes code."
 ---
 
 # Relay reviewer

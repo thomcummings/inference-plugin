@@ -1,6 +1,6 @@
 # Newsroom
 
-A Claude Code plugin that takes a rough content idea through a six-role newsroom pipeline to produce a fact-checked, publishable draft.
+A workflow in the `gtm` plugin that takes a rough content idea through a six-role newsroom pipeline to produce a fact-checked, publishable draft.
 
 Modelled on the craft standards of publications like the New York Times, New Yorker, and Guardian — where a story gets interrogated by five different people before anyone writes the lede. Each role in this pipeline runs as an isolated subagent, which prevents context convergence (the failure mode where every role starts sounding like the same voice).
 
@@ -27,11 +27,12 @@ This plugin separates the jobs. Each role runs as a fresh subagent with only the
 
 ## Installation
 
-The plugin ships as a standard Claude Code plugin. Install it via your preferred mechanism:
+newsroom ships in the `gtm` plugin:
 
-- From a marketplace: `/plugin install newsroom`
-- From a local directory: `/plugin marketplace add /path/to/newsroom-plugin` then `/plugin install newsroom`
-- From a git repository: follow your marketplace's pattern
+```bash
+/plugin marketplace add thomcummings/inference-plugin
+/plugin install gtm@inference
+```
 
 Once installed, the slash commands below are available.
 
@@ -174,4 +175,4 @@ The pipeline deliberately avoids what most AI content tools do: one model, one p
 
 ## Licence
 
-MIT. See [LICENSE](../../LICENSE) at the root of this repository.
+MIT. See [LICENSE](../../../LICENSE) at the root of this repository.

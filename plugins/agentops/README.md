@@ -6,7 +6,7 @@ Skills for building and running an agent setup.
 
 ```bash
 /plugin marketplace add thomcummings/inference-plugin
-/plugin install agentops@inference-plugin
+/plugin install agentops@inference
 ```
 
 ## Skills

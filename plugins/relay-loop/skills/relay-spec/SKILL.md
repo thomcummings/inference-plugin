@@ -1,6 +1,6 @@
 ---
 name: relay-spec
-description: "Interview the user about a raw idea until confident, then file it in the configured tracker as one build-ready issue — or an ordered chain of them — under the right project. Use to run the Relay spec interview or plan a feature. Interactive — the user is present and owns every product decision; never runs unattended."
+description: "Interview the user about a raw idea until confident, then file it in the configured tracker as one build-ready issue — or an ordered chain of them — under the right project. Use to run the Relay spec interview or plan a feature, including Slack/Cursor Cloud phrases like 'please spec X', 'spec this', or 'file it as relay-draft'. Interactive — the user is present and owns every product decision; never runs unattended."
 ---
 
 # Relay spec
@@ -27,6 +27,14 @@ If a codebase is present, read the relevant code and every guide in
 `repo_guides` first — which files are involved, what patterns exist, what
 constraints apply. Read the source plan/idea. Never ask what the codebase can
 answer. If there is no codebase, skip to the interview.
+
+### 1b. Design first, for anything the user will see
+If the work changes something on screen (a layout, a control, a panel, copy in
+the UI), there must be an approved picture before the spec is drafted. If one
+exists, link it and treat it as part of the contract. If not, run relay-design
+first: options, the user picks, and the pick becomes the spec's reference. Small
+fixes inside an already approved design are the exception. Never draft a UI spec
+from words alone.
 
 ## 2. Interview in rounds
 Ask 1–4 questions per round, concrete options, your recommended option first.
@@ -64,6 +72,21 @@ to verify; Source). Rules:
   length — never split what fits in one issue.
 - Every issue in a chain is a real, human-legible unit of work, not a fragment:
   a reader skimming the tracker should understand each one on its own.
+- **Done evidence.** `How to verify` names what the builder attaches before it
+  says done, so the user never has to find what a check would have found. Pick
+  by the kind of work, scaled to its risk:
+  - **UI:** screenshots in WebKit and Chromium at phone portrait and landscape,
+    tablet and desktop, panels open and closed, side by side with the approved
+    mockup, every difference listed. A copy or colour tweak needs only the
+    screens and sizes it shows on.
+  - **Sound:** a short rendered clip the user can play, and a line on what wasn't
+    judged by ear.
+  - **Saved state:** a round trip (save, reload, load) on the shapes the change
+    touches.
+  - **Native or device:** what was built and run, and which device checks are
+    still owed (named, not implied).
+  The reviewer checks the evidence against these lines; missing evidence is a
+  failed AC, not a nit.
 
 ### The title
 
@@ -88,7 +111,7 @@ Good:  "Build v1 experiments capability"
        "Customer dossiers — reconstruct one of the client's accounts on a
         timeline"  (long, but the clause is what makes "dossier" mean anything
         to someone who hasn't read the issue)
-Bad:   "Ergo goes and checks its own views — position self-checks on the hourly
+Bad:   "The assistant checks its own views — position self-checks on the hourly
         dispatcher"  (the clause describes the mechanism)
        "Sweep every skill for where a connected tool would change the answer —
         and where to push for the connection"  (the clause is a second scope
