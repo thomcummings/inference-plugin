@@ -15,7 +15,7 @@ asks only for what's missing, and leaves you a working document you can act on.
 | [`gtm`](./plugins/gtm) | Marketing and go-to-market strategy | 31 |
 | [`thinking-tools`](./plugins/thinking-tools) | Thinking a hard call through before you commit | 3 |
 | [`agentops`](./plugins/agentops) | Designing the skills, agents, routines and workflows in your own setup | 4 |
-| [`relay-loop`](./plugins/relay-loop) | Shipping software through a human-gated agent loop | 12 |
+| [`relay-loop`](./plugins/relay-loop) | Shipping software through a human-gated agent loop | 11 |
 
 ## Start here
 
