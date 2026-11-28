@@ -203,4 +203,4 @@ and an agent that can be relied on.
 
 ## Licence
 
-(Add your preferred licence here.)
+MIT. See [LICENSE](../../LICENSE) at the root of this repository.

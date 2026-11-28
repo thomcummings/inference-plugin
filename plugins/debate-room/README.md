@@ -120,4 +120,4 @@ Built on the principle that good answers to hard questions come from real disagr
 
 ## Licence
 
-(Add your preferred licence here.)
+MIT. See [LICENSE](../../LICENSE) at the root of this repository.

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Marketing System Model"
+  short_description: "Build and refresh a living IMSM client model"
+  default_prompt: "Use $build-marketing-system-model to create or update a living client model from this diagnostic JSON and supporting context."

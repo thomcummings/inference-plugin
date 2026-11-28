@@ -174,4 +174,4 @@ The pipeline deliberately avoids what most AI content tools do: one model, one p
 
 ## Licence
 
-(Add your preferred licence here.)
+MIT. See [LICENSE](../../LICENSE) at the root of this repository.

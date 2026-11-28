@@ -23,6 +23,16 @@
       "name": "relay-loop",
       "source": "./plugins/relay-loop",
       "description": "Run an issue from rough idea to merge-ready PR through a disciplined, human-gated agent loop — spec, build, independent review, fix rounds, and a closing wrap that verifies the work landed. Each pass in a fresh context. The rigour of a well-run engineering team without the headcount."
+    },
+    {
+      "name": "gtm",
+      "source": "./plugins/gtm",
+      "description": "Go-to-market and marketing strategy skills: positioning, messaging, ICP, growth models and bets, channel maps, ABM, pricing, naming, brand, selling systems and more. Each skill turns a piece of marketing practice into a repeatable workflow."
+    },
+    {
+      "name": "agentops",
+      "source": "./plugins/agentops",
+      "description": "Skills for building and running an agent setup: deciding whether a need is a skill or an agent and designing it, handing context between sessions, and checking a thread is safe to close."
     }
   ]
 }
