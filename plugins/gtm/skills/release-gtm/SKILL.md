@@ -12,7 +12,7 @@ description: >-
   trade-off. Trigger on "how should we launch X", "does this deserve a launch", "what
   tier is this", "are we over-launching this". Not for positioning/messaging from scratch
   (positioning, messaging-framework), channel strategy (channel-map), growth experiments
-  (growth-bets), pricing, final copy (copywriting), or sustained campaigns (campaign-brief
+  (growth-bets), finding press angles across the company (news-angles), pricing, final copy (copywriting), or sustained campaigns (campaign-brief
   release-gtm is upstream).
 ---
 
@@ -77,6 +77,8 @@ itself. Lead with the recommendation, show the reasoning, end with handoffs.
 - A sustained, multi-touch campaign over weeks → `campaign-brief` (this skill is
   upstream; it hands a launch plan to a campaign brief, it doesn't replace it).
 - Final asset copy → `copywriting`, or your own voice pass.
+- "Do we have anything newsworthy?" across the company rather than one release →
+  `news-angles` (it hands launch angles back here).
 
 ## Inputs to read first (don't ask what you can look up)
 
