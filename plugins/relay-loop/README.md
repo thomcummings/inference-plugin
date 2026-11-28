@@ -67,9 +67,6 @@ Six skills, each one pass, each runnable on its own:
   together over a period and returns a short, ranked set of changes worth
   formalising.
 
-For a general close-out check on a thread that never touched the loop, use `wrap`
-from the `agentops` plugin in this marketplace.
-
 ## Why it's built this way
 
 The single most important rule in the loop is **separation of concerns**:
