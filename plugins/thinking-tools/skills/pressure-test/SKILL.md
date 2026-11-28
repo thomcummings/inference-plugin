@@ -55,7 +55,7 @@ on someone's money is not the place for flourish.
 - The user is excited and wants a gut-check, or uneasy and wants permission to stop.
 - Real money, real time, or real opportunity cost is about to be spent.
 - Before a launch, a channel test that needs budget, a rebrand, an agency retainer, a
-  big content push.
+  big content push, a key hire, a new product line or a market entry.
 
 ## When NOT to use
 
@@ -111,7 +111,7 @@ the polished first answer; the real answer is usually the second one.
 | 1 | **Pull reality** | Real evidence this works, vs "it seems like a good idea" | "It'll raise awareness", waitlist signups, "competitors do it", a gut feeling dressed as a trend |
 | 2 | **Counterfactual** | What happens if we do nothing; what already does this job | "We just won't grow" with no mechanism; can't say what breaks without it |
 | 3 | **Whose, exactly** | The specific buyer and what they currently do/say | A category, not a person ("SMBs", "marketers"); our words for the value, not theirs |
-| 4 | **Narrowest wedge** | The smallest version that throws a real signal this week | "We need the whole funnel/site/campaign live before it works" |
+| 4 | **Narrowest wedge** | The smallest version that throws a real signal this week | "We need the whole funnel/site/campaign/team in place before it works" |
 | 5 | **Cost & reversibility** | True cost in money, attention and opportunity; can we stop cleanly | Cost counted in cash only, not attention; no kill switch; a one-way door framed as a try |
 | 6 | **Model & spine fit** | Does it prove/advance the growth model and positioning, or drift off them; compound or one-off; and what axis it makes the buyer judge us on | Off-positioning "because it'll do numbers"; a boost mislabelled as an engine; a move that re-argues the decision on a competitor's strongest axis (e.g. price, where "do nothing" wins) |
 
@@ -238,7 +238,7 @@ Shrink to [x] / close [gap] via [skill] / stop and put the energy into [y].
 Use as lineage, not as copy:
 
 - YC office-hours forcing-question discipline (demand reality, status quo, desperate
-  specificity, narrowest wedge), adapted from product validation to marketing bets and
+  specificity, narrowest wedge), adapted from product validation to business bets (marketing ones most often) and
   stripped of the panel/pitch apparatus.
 - Pre-mortem (Gary Klein): assume the move failed, work back to why, before committing.
 - Inference doctrine: strategy before tactics, visible and graded assumptions, the
@@ -253,6 +253,7 @@ Use as lineage, not as copy:
 - `growth-bets` — a proceed becomes a bet with a full proof plan; or "what instead" when
   the answer is no.
 - `channel-map` — route-to-market detail if the move is a channel.
+- `org-design` — if the move is a hire or a new capability.
 - `icp` / `positioning` / `growth-model` — close the foundation gap behind a "not yet".
 - measurement / instrumentation — when the move fails the visibility gate.
 - `agentic-opportunity` — if the move's economics change enough with agents to be worth
