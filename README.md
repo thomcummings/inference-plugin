@@ -14,7 +14,7 @@ asks only for what's missing, and leaves you a working document you can act on.
 |---|---|---|
 | [`gtm`](./plugins/gtm) | Marketing and go-to-market strategy | 32 |
 | [`thinking-tools`](./plugins/thinking-tools) | Thinking a hard call through before you commit | 3 |
-| [`agentops`](./plugins/agentops) | Building and running your own agent setup | 3 |
+| [`agentops`](./plugins/agentops) | Designing the skills, agents and routines in your own setup | 3 |
 | [`relay-loop`](./plugins/relay-loop) | Shipping software through a human-gated agent loop | 12 |
 
 ## Start here
@@ -78,7 +78,7 @@ tradeoffs, and leaves the strategic judgement to you.
 |---|---|
 | `skill-design` | Decides whether a need is a skill at all, then designs, trials and places it |
 | `agent-design` | Decides whether a need is a persistent agent, then designs its card, deployment and trial |
-| `handoff` | Packages working context so another session, agent or platform can pick up cleanly |
+| `routine-design` | Decides whether a recurring job is a routine, then designs its contract, method skill and thin scheduler prompt |
 
 ### Software delivery (`relay-loop`)
 

@@ -22,7 +22,7 @@
     {
       "name": "agentops",
       "source": "./plugins/agentops",
-      "description": "Skills for building and running an agent setup: deciding whether a need is a skill or an agent and designing it and handing context between sessions."
+      "description": "Design the pieces of an agent setup: decide whether a need is a skill, a persistent agent or a routine, then design, trial and place it."
     },
     {
       "name": "relay-loop",
