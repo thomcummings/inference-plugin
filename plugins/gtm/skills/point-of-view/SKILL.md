@@ -10,7 +10,8 @@ description: >
   content with no throughline, or "we have positioning but don't know what to keep saying". Sits
   downstream of positioning and brand-architecture, upstream of messaging-framework and content
   production. Not a content-strategy skill (no calendars, SEO or distribution) and not the single
-  company strategic narrative (brand-architecture).
+  company strategic narrative (brand-architecture). Not for finding timely, newsworthy
+  angles in what the company has done (news-angles).
 ---
 
 # Point of View
@@ -214,6 +215,8 @@ chasing it here dilutes the throughline.
   things the site and sales must say consistently.
 - **To the content team:** proof areas and starter angles as first briefs. They own the calendar,
   formats, SEO, production and distribution.
+- **To news-angles:** when the team wants to know which stories could get covered now. Starter
+  angles here are evergreen; news-angles grades timely ones against news tests.
 
 Don't produce calendars, cadences, channel plans or SEO targets. If the user asks for them, hand
 over this map as the input.

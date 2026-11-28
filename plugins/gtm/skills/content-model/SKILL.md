@@ -11,7 +11,7 @@ description: >-
   but it doesn't add up"; or who actually reads and shares the content — "who's our
   content audience", "our posts are fine and nobody shares them" (a wider group than
   the ICP; who to sell to is icp). Trigger eagerly. Pairs with growth-model; consumes
-  channel-map. NOT point-of-view, channel prioritisation, messaging-framework, deep
+  channel-map. NOT point-of-view, finding press or news angles (news-angles), channel prioritisation, messaging-framework, deep
   SEO keyword research (content-strategy), or writing a single piece.
 ---
 
@@ -147,6 +147,9 @@ them but doesn't write them.
 
 ### Boundary notes (kept distinct so triggers don't fight)
 
+- **vs. `news-angles`** — news-angles finds the timely stories a company could get
+  covered for and grades them as news or announcement. Content-model builds the standing
+  system those stories travel through. A strong news angle can become an anchor here.
 - **vs. `point-of-view`** — POV owns the *belief* and the *storylines* and stops at the
   first cut of topics. Content-model *starts* from signature topics and builds the
   whole system around them. Need the belief? Route to POV first.

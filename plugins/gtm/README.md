@@ -21,7 +21,7 @@ working document.
 | Growth | `growth-model`, `growth-bets`, `channel-map`, `campaign-brief`, `release-gtm`, `dev-mktg`, `pricing-packaging` |
 | Plans and decisions | `marketing-plan`, `marketing-board-update`, `analyst`, `org-design`, `agentic-opportunity` |
 | Sales and ABM | `selling-system`, `abm-strategy`, `abm-setup`, `abm-ops` |
-| Content production | `newsroom`, `research-tooling`, plus the `/newsroom` commands and six newsroom agents. See [docs/newsroom.md](./docs/newsroom.md) |
+| Content production | `news-angles`, `newsroom`, `research-tooling`, plus the `/newsroom` commands and six newsroom agents. See [docs/newsroom.md](./docs/newsroom.md) |
 
 Some skills hand off to others by name. A handoff to a skill you haven't installed is a
 suggestion, not a requirement. For stress-testing a plan or a single bet, install
