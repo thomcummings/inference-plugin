@@ -15,7 +15,7 @@ asks only for what's missing, and leaves you a working document you can act on.
 | [`gtm`](./plugins/gtm) | Marketing and go-to-market strategy | 32 |
 | [`thinking-tools`](./plugins/thinking-tools) | Thinking a hard call through before you commit | 3 |
 | [`agentops`](./plugins/agentops) | Building and running your own agent setup | 4 |
-| [`relay-loop`](./plugins/relay-loop) | Shipping software through a human-gated agent loop | 11 |
+| [`relay-loop`](./plugins/relay-loop) | Shipping software through a human-gated agent loop | 12 |
 
 ## Start here
 
@@ -86,7 +86,7 @@ tradeoffs, and leaves the strategic judgement to you.
 A disciplined loop that takes an issue from rough idea to merge-ready PR: spec, build,
 independent review and fix rounds, each in a fresh context, with a human owning every
 gate. Around it sit skills for decisions, UI design, QA sweeps, a weekly release and a
-retro. See the [relay-loop README](./plugins/relay-loop/README.md).
+retro, and `relay-wrap` closes the book on a finished thread. See the [relay-loop README](./plugins/relay-loop/README.md).
 
 ## Install
 
@@ -126,6 +126,24 @@ on the skill. Fixes to the skills themselves are welcome as pull requests.
 
 If you're missing a skill for a problem you keep running into, [get in
 touch](https://thisisinference.com).
+
+## Use them with judgement
+
+These skills are shared as they are, to help you think and work, not to do your thinking
+for you.
+
+- **Check the output.** AI models make mistakes, including confident ones. Review
+  anything a skill produces before you act on it, publish it or show it to a client.
+- **No promises.** Inference makes no guarantee that the skills are accurate, complete or
+  fit for your situation, or that they work as described in every setup.
+- **Things change.** Skills are written and tested against the models and tools of the
+  day. New models, platform changes and a moving market can make parts of them out of
+  date.
+- **Your call, your responsibility.** Decisions you make with these skills are yours.
+  Nothing here is legal, financial or other professional advice.
+
+The MIT licence also applies: the software is provided "as is", without warranty of any
+kind.
 
 ## Licence
 

@@ -2,7 +2,7 @@
 
 A Claude Code plugin that runs an issue from a rough idea to a merge-ready PR
 through a disciplined, human-gated agent loop, then carries it on through QA
-and a weekly release. Eleven skills that work together (or standalone) to give
+and a weekly release. Twelve skills that work together (or standalone) to give
 you the rigour of a well-run product and engineering team without the headcount.
 
 Built on the conviction that the value of agentic coding isn't raw autonomy —
@@ -18,7 +18,7 @@ in isolated workspaces, reviews each PR against its written contract, and loops
 on fixes until the work is either approved or parked in front of a human.
 
 ```
-spec → ready → build → review → approved / changes / human → merge
+spec → ready → build → review → approved / changes / human → merge → wrap
                 ↑                    │
                 └──── fix pass ◄─────┘
 
@@ -27,7 +27,7 @@ release branch → QA sweep → release → retro
 
 ### The core loop
 
-Five skills, each one pass, each runnable on its own:
+Six skills, each one pass, each runnable on its own:
 
 - **`relay-spec`** — interviews you about a raw idea until a spec is so precise
   that two different agents would build the same thing, then files it (or an
@@ -42,6 +42,10 @@ Five skills, each one pass, each runnable on its own:
   (must-fix / should-fix / safe).
 - **`relay-orchestrate`** — runs one issue through the whole loop without you
   asking for each stage; escalates only the decisions that are yours by design.
+- **`relay-wrap`** — checks the loop actually reached a terminal state, surfaces
+  anything left undone, and tells you whether the thread is safe to archive.
+  *Closes the book.* Explicit invocation only.
+
 ### Around the loop
 
 - **`relay-decide`** — puts one decision in front of a busy owner so it can be
@@ -63,8 +67,8 @@ Five skills, each one pass, each runnable on its own:
   together over a period and returns a short, ranked set of changes worth
   formalising.
 
-To check a thread is safe to close once the loop is done, use `wrap` from the
-`agentops` plugin in this marketplace.
+For a general close-out check on a thread that never touched the loop, use `wrap`
+from the `agentops` plugin in this marketplace.
 
 ## Why it's built this way
 
@@ -111,6 +115,9 @@ The skills then load namespaced by plugin, for example
 
 # Review open PRs that need a verdict
 /relay-loop:relay-review
+
+# Check a finished thread is safe to archive
+/relay-loop:relay-wrap
 ```
 
 ### Full loop (orchestrated)
