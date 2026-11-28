@@ -1,38 +1,33 @@
 {
-  "name": "inference-blueprints",
+  "name": "inference",
   "owner": {
-    "name": "Thom Cummings",
+    "name": "Inference",
     "url": "https://thisisinference.com"
   },
   "metadata": {
-    "description": "A Claude Code plugin marketplace from Inference — marketing plugins for the AI rebuild.",
-    "version": "0.1.0"
+    "description": "Open-source marketing skills and agent workflows from Inference, an independent marketing studio for the AI rebuild.",
+    "version": "0.2.0"
   },
   "plugins": [
     {
-      "name": "newsroom",
-      "source": "./plugins/newsroom",
-      "description": "Six-role newsroom pipeline that takes a rough concept to a publishable, fact-checked draft. Each role runs as an isolated subagent to prevent context convergence."
-    },
-    {
-      "name": "debate-room",
-      "source": "./plugins/debate-room",
-      "description": "Convene a room of opinionated expert personas to stress-test a question. Each persona is briefed as an independent subagent to prevent convergence, then the orchestrator maps tensions and synthesises a multi-viewpoint answer."
-    },
-    {
-      "name": "relay-loop",
-      "source": "./plugins/relay-loop",
-      "description": "Run an issue from rough idea to merge-ready PR through a disciplined, human-gated agent loop — spec, build, independent review, fix rounds, and a closing wrap that verifies the work landed. Each pass in a fresh context. The rigour of a well-run engineering team without the headcount."
-    },
-    {
       "name": "gtm",
       "source": "./plugins/gtm",
-      "description": "Go-to-market and marketing strategy skills: positioning, messaging, ICP, growth models and bets, channel maps, ABM, pricing, naming, brand, selling systems and more. Each skill turns a piece of marketing practice into a repeatable workflow."
+      "description": "Go-to-market and marketing strategy skills: positioning, point of view, messaging, ICP, growth models and bets, channel maps, ABM, pricing, naming, brand, selling systems, and the newsroom content pipeline. Each skill turns a piece of marketing practice into a repeatable workflow."
+    },
+    {
+      "name": "thinking-tools",
+      "source": "./plugins/thinking-tools",
+      "description": "Skills for thinking a hard call through before you commit: debate-room convenes independent expert personas, sharpen-strategy grills a plan to shared understanding, and pressure-test runs the go/no-go gate on one bet."
     },
     {
       "name": "agentops",
       "source": "./plugins/agentops",
-      "description": "Skills for building and running an agent setup: deciding whether a need is a skill or an agent and designing it, handing context between sessions, and checking a thread is safe to close."
+      "description": "Skills for building and running an agent setup: deciding whether a need is a skill or an agent and designing it and handing context between sessions."
+    },
+    {
+      "name": "relay-loop",
+      "source": "./plugins/relay-loop",
+      "description": "Run an issue from rough idea to merge-ready PR through a disciplined, human-gated agent loop (spec, build, independent review, fix rounds), then on through design checks, QA, a weekly release and a closing wrap. Each pass in a fresh context."
     }
   ]
 }

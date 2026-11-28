@@ -1,9 +1,9 @@
 # Relay Loop
 
 A Claude Code plugin that runs an issue from a rough idea to a merge-ready PR
-through a disciplined, human-gated agent loop. Six skills — spec, batch,
-build, review, orchestrate, wrap — that work together (or standalone) to give
-you the rigour of a well-run engineering team without the headcount.
+through a disciplined, human-gated agent loop, then carries it on through QA
+and a weekly release. Twelve skills that work together (or standalone) to give
+you the rigour of a well-run product and engineering team without the headcount.
 
 Built on the conviction that the value of agentic coding isn't raw autonomy —
 it's **discipline applied at the boundaries**. Relay's job is to make sure the
@@ -18,10 +18,14 @@ in isolated workspaces, reviews each PR against its written contract, and loops
 on fixes until the work is either approved or parked in front of a human.
 
 ```
-spec → ready → build → review → approved / changes / human → wrap
+spec → ready → build → review → approved / changes / human → merge → wrap
                 ↑                    │
                 └──── fix pass ◄─────┘
+
+release branch → QA sweep → release → retro
 ```
+
+### The core loop
 
 Six skills, each one pass, each runnable on its own:
 
@@ -38,10 +42,30 @@ Six skills, each one pass, each runnable on its own:
   (must-fix / should-fix / safe).
 - **`relay-orchestrate`** — runs one issue through the whole loop without you
   asking for each stage; escalates only the decisions that are yours by design.
-- **`relay-wrap`** — closes the book on a relay-driven thread: verifies the loop
-  reached a terminal state (merged, parked, or abandoned), catches what the
-  loop's discipline couldn't see, and tells you whether the thread is safe to
-  archive. The counterpart to relay-spec.
+- **`relay-wrap`** — checks the loop actually reached a terminal state, surfaces
+  anything left undone, and tells you whether the thread is safe to archive.
+  *Closes the book.* Explicit invocation only.
+
+### Around the loop
+
+- **`relay-decide`** — puts one decision in front of a busy owner so it can be
+  answered cold: what and where, why now, a picture of each option, and a
+  recommendation. Keeps every open call in one needs-you list.
+- **`relay-design`** — gets app UI right before and after it's built: frames the
+  problem, explores genuinely different options at real sizes and states, runs
+  them past an independent critic and automatic layout checks, converges on a
+  design contract, then checks the build matches it.
+- **`ui-analysis`** — turns a design image or URL into a structured spec
+  (tokens, components, implementation notes) a builder can work from.
+- **`relay-qa`** — a release-candidate QA sweep: cheap tester agents, each with
+  one lens, try to break the real build; one auditor reproduces and files only
+  confirmed bugs. Never fixes code itself.
+- **`relay-release`** — runs one release a week as PM across agent threads:
+  scope, release branch, daily needs-you list, freeze, store builds, tags and
+  the one release PR to main.
+- **`relay-retro`** — reviews how the owner and their agents have worked
+  together over a period and returns a short, ranked set of changes worth
+  formalising.
 
 ## Why it's built this way
 
@@ -63,17 +87,14 @@ runs every stage (as long as each is a fresh context) or a fleet does.
 
 ## Installation
 
-The plugin ships as a standard Claude Code plugin. Install it via your
-preferred mechanism:
+```bash
+/plugin marketplace add thomcummings/inference-plugin
+/plugin install relay-loop@inference
+```
 
-- From a marketplace: `/plugin install relay-loop`
-- From a local directory: `/plugin marketplace add /path/to/relay-loop` then
-  `/plugin install relay-loop`
-
-The six skills then load as `/relay-loop:relay-spec`,
-`/relay-loop:relay-batch`, `/relay-loop:relay-build`,
-`/relay-loop:relay-review`, `/relay-loop:relay-orchestrate` and
-`/relay-loop:relay-wrap` (namespaced by plugin).
+The skills then load namespaced by plugin, for example
+`/relay-loop:relay-spec`, `/relay-loop:relay-orchestrate` or
+`/relay-loop:relay-qa`.
 
 ## Usage
 
@@ -91,6 +112,9 @@ The six skills then load as `/relay-loop:relay-spec`,
 
 # Review open PRs that need a verdict
 /relay-loop:relay-review
+
+# Check a finished thread is safe to archive
+/relay-loop:relay-wrap
 ```
 
 ### Full loop (orchestrated)
@@ -105,19 +129,19 @@ isolated clone, run the review, loop on fixes (capped at two rounds, then it
 forces a human call), and hand you a merge-ready PR — or park an escalation in
 front of you with exactly three lines: *Deciding / Options / My read*.
 
-### Closing a thread (after the loop)
+### Around a release
 
 ```bash
-# Is this thread safe to archive? Verifies the loop reached a terminal state
-/relay-loop:relay-wrap
-```
+# Kick off this week's release, then sweep the candidate for bugs
+/relay-loop:relay-release
+/relay-loop:relay-qa
 
-`relay-wrap` is the closing ritual for a relay-driven thread. It checks the
-issue actually landed (merged, parked for a human, or abandoned — and says
-which), surfaces anything the loop's discipline couldn't see (an unverified
-"tests pass", an unanswered escalation, a follow-up you promised), and gives a
-one-line verdict on whether the thread is closeable. Report only — it never
-fixes or files; it offers, and acts only if asked.
+# Put a waiting decision in front of the owner
+/relay-loop:relay-decide
+
+# Look back at how the work went
+/relay-loop:relay-retro
+```
 
 ## Configuration
 
@@ -194,7 +218,7 @@ agent never readies anything on its own; the human owns that boundary.
 
 ## Credits and philosophy
 
-Built from the operating method of a one-person practice that runs real client
+Built from the operating method Inference uses to run real product and client
 work through an agent loop: the point was never maximum autonomy, but maximum
 trust in the work an agent hands back. When a machine can build, review and fix
 on its own, the scarce thing is *judgement at the gates* — so the loop spends
