@@ -22,7 +22,7 @@
     {
       "name": "agentops",
       "source": "./plugins/agentops",
-      "description": "Design the pieces of an agent setup: decide whether a need is a skill, a persistent agent or a routine, then design, trial and place it."
+      "description": "Design the pieces of an agent setup: decide whether a need is a skill, a persistent agent, a routine or a multi-agent workflow, then design, trial and place it."
     },
     {
       "name": "relay-loop",

@@ -1,7 +1,7 @@
 # agentops
 
 Skills for designing an agent setup. Each one decides first whether a need is a skill,
-a persistent agent or a routine, then designs, trials and places it.
+a persistent agent, a routine or a workflow, then designs, trials and places it.
 
 ## Install
 
@@ -17,6 +17,7 @@ a persistent agent or a routine, then designs, trials and places it.
 | `skill-design` | Decide whether a need is a skill at all, then design, trial and place it |
 | `agent-design` | Decide whether a need is a persistent agent, then design its card, deployment and trial |
 | `routine-design` | Decide whether a recurring job is a routine, then design its contract, method skill and native job text |
+| `workflow-design` | Decide whether a job needs several agent passes, then design the stages, handoffs, independence and human gates |
 
 ## Licence
 
