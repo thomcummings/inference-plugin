@@ -119,6 +119,7 @@ If it fails, recommend the lighter home and stop:
 | Something done once | **just do it**, or a prompt |
 | Recurring work with a trigger and an output | a **routine** — hand to `routine-design` |
 | A standing role holding judgement across many tasks | a **persistent agent** — hand to `agent-design` |
+| Several passes that must not share a context, or human sign-offs between stages | a **workflow** — hand to `workflow-design` |
 | Deterministic steps with no judgement | a **script** the skill calls, or a script on its own |
 | A missing branch of something that already exists | an **edit to that skill** |
 | Reference material several skills read | the repo's **shared training material**, not a skill and not inside one |

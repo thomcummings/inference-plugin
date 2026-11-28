@@ -104,7 +104,8 @@ If it fails the gate, recommend the lighter primitive and stop:
 | Accountability, relationships, taste, or undelegatable judgement | a **human** (optionally supported by a skill, routine, or agent) |
 | A repeatable method or playbook | a **skill** |
 | A recurring scheduled job with a defined output | a **routine** |
-| Deterministic steps with no judgement | a **workflow or script** |
+| Several passes per job, with handoffs and gates between them | a **workflow** — hand to `workflow-design` |
+| Deterministic steps with no judgement | a **script** |
 | Bounded specialist work inside a bigger task | a **temporary subagent** |
 | A way of working, not a worker | a **mode** — a reusable stance or instruction set (for example a project instruction file), not a standing worker |
 

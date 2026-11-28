@@ -12,7 +12,7 @@
     {
       "name": "gtm",
       "source": "./plugins/gtm",
-      "description": "Go-to-market and marketing strategy skills: positioning, point of view, messaging, ICP, growth models and bets, channel maps, ABM, pricing, naming, brand, selling systems, news angles, and the newsroom content pipeline. Each skill turns a piece of marketing practice into a repeatable workflow."
+      "description": "Go-to-market and marketing strategy skills: positioning, point of view, messaging, ICP, growth models and bets, channel maps, ABM, pricing, naming, brand, selling systems and news angles. Each skill turns a piece of marketing practice into a repeatable workflow."
     },
     {
       "name": "thinking-tools",
@@ -22,7 +22,7 @@
     {
       "name": "agentops",
       "source": "./plugins/agentops",
-      "description": "Skills for building and running an agent setup: deciding whether a need is a skill or an agent and designing it and handing context between sessions."
+      "description": "Design the pieces of an agent setup: decide whether a need is a skill, a persistent agent, a routine or a multi-agent workflow, then design, trial and place it."
     },
     {
       "name": "relay-loop",

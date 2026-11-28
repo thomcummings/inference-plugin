@@ -12,9 +12,9 @@ asks only for what's missing, and leaves you a working document you can act on.
 
 | Plugin | For | Skills |
 |---|---|---|
-| [`gtm`](./plugins/gtm) | Marketing and go-to-market strategy | 33 |
+| [`gtm`](./plugins/gtm) | Marketing and go-to-market strategy | 31 |
 | [`thinking-tools`](./plugins/thinking-tools) | Thinking a hard call through before you commit | 3 |
-| [`agentops`](./plugins/agentops) | Building and running your own agent setup | 3 |
+| [`agentops`](./plugins/agentops) | Designing the skills, agents, routines and workflows in your own setup | 4 |
 | [`relay-loop`](./plugins/relay-loop) | Shipping software through a human-gated agent loop | 12 |
 
 ## Start here
@@ -62,7 +62,7 @@ tradeoffs, and leaves the strategic judgement to you.
 | Growth | `growth-model`, `growth-bets`, `channel-map`, `campaign-brief`, `release-gtm`, `dev-mktg`, `pricing-packaging` |
 | Plans and decisions | `marketing-plan`, `marketing-board-update`, `analyst`, `org-design`, `agentic-opportunity` |
 | Sales and ABM | `selling-system`, `abm-strategy`, `abm-setup`, `abm-ops` |
-| Content production | `news-angles` (finds the stories you could get covered for and grades news vs announcement), `newsroom` (a six-role pipeline from rough concept to fact-checked draft), `research-tooling` |
+| Content production | `news-angles` (finds the stories you could get covered for and grades news vs announcement) |
 
 ### Thinking tools (`thinking-tools`)
 
@@ -78,7 +78,8 @@ tradeoffs, and leaves the strategic judgement to you.
 |---|---|
 | `skill-design` | Decides whether a need is a skill at all, then designs, trials and places it |
 | `agent-design` | Decides whether a need is a persistent agent, then designs its card, deployment and trial |
-| `handoff` | Packages working context so another session, agent or platform can pick up cleanly |
+| `routine-design` | Decides whether a recurring job is a routine, then designs its contract, method skill and thin scheduler prompt |
+| `workflow-design` | Decides whether a job needs several agent passes, then designs the stages, handoffs, independence and human gates |
 
 ### Software delivery (`relay-loop`)
 
