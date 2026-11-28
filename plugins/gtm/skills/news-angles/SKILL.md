@@ -16,7 +16,7 @@ description: >-
   press releases or crisis comms (public-relations), planning a launch
   (release-gtm), setting the company's beliefs and storylines (point-of-view),
   designing the content system (content-model), or writing the piece itself
-  (newsroom, copywriting).
+  (copywriting, or a writing skill).
 ---
 
 # News angles
@@ -116,7 +116,7 @@ folder. Propose before writing.
 | To plan the launch behind a launch angle, or decide how big a release is | `release-gtm` |
 | Beliefs and storylines the angles should keep landing | `point-of-view` |
 | Angles turned into an ongoing content system and calendar | `content-model` |
-| The article, op-ed or post written | `newsroom`, `copywriting`, or your own voice pass |
+| The article, op-ed or post written | `copywriting`, or your own writing skill or voice pass |
 | Original research run to create a data story | `analyst` for the analysis; the research design is the person's call |
 | The shortlist's proof gaps filed back into the store | `context-layer` |
 
