@@ -2,7 +2,7 @@
 
 A Claude Code plugin that runs an issue from a rough idea to a merge-ready PR
 through a disciplined, human-gated agent loop, then carries it on through QA
-and a weekly release. Twelve skills that work together (or standalone) to give
+and a weekly release. Eleven skills that work together (or standalone) to give
 you the rigour of a well-run product and engineering team without the headcount.
 
 Built on the conviction that the value of agentic coding isn't raw autonomy —
@@ -55,8 +55,6 @@ Six skills, each one pass, each runnable on its own:
   problem, explores genuinely different options at real sizes and states, runs
   them past an independent critic and automatic layout checks, converges on a
   design contract, then checks the build matches it.
-- **`ui-analysis`** — turns a design image or URL into a structured spec
-  (tokens, components, implementation notes) a builder can work from.
 - **`relay-qa`** — a release-candidate QA sweep: cheap tester agents, each with
   one lens, try to break the real build; one auditor reproduces and files only
   confirmed bugs. Never fixes code itself.
