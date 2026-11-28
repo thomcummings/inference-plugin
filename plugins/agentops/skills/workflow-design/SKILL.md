@@ -133,11 +133,11 @@ or **collapse to a skill**.
 
 ## Patterns
 
-Three common shapes, each with a reference workflow in this marketplace:
+Three common shapes:
 
-- **Pipeline with independent checks** (`gtm:newsroom`): brief, research,
-  write, edit, fact-check. Each role is a separate subagent; the fact-checker
-  works from the dossier, not the writer's account.
+- **Pipeline with independent checks** (for example a content pipeline):
+  brief, research, write, edit, fact-check. Each role is a separate subagent;
+  the fact-checker works from the research dossier, not the writer's account.
 - **Independent views, then synthesis** (`thinking-tools:debate-room`):
   personas answer alone, then see each other once to rebut, then one pass maps
   the tensions and synthesises.
@@ -174,5 +174,5 @@ Three common shapes, each with a reference workflow in this marketplace:
 
 Part of the Inference agentops design set with `skill-design`,
 `agent-design` and `routine-design`: each decides first whether the need
-belongs to it at all. The patterns come from Inference's own newsroom,
+belongs to it at all. The patterns come from Inference's own content,
 debate-room and relay-loop workflows.
